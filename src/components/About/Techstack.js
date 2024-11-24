@@ -25,6 +25,25 @@ import {
   SiRabbitmq,
   SiSolidity,
   SiNextdotjs,
+  SiDotnet,
+  SiSpring,
+  SiAmazonaws,
+  SiMicrosoftazure,
+  SiCircleci,
+  SiAngular,
+  SiTypescript,
+  SiReact,
+  SiTravisci,
+  SiMysql,
+  SiApachecassandra,
+  SiApachespark,
+  SiDatabricks,
+  SiApacheairflow,
+  SiHtml5,
+  SiCss3,
+  SiSass,
+  SiGnubash,
+  SiShell,
 } from "react-icons/si";
 import { TbBrandGolang } from "react-icons/tb";
 
@@ -99,6 +118,63 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiGit />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiDotnet />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiSpring />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAmazonaws />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiMicrosoftazure />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiCircleci />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAngular />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiTypescript />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiReact />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiTravisci />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiMysql />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiApachecassandra />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiApachespark />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiDatabricks />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiApacheairflow />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiHtml5 />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiCss3 />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiSass />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiGnubash />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiShell />
       </Col>
     </Row>
   );
