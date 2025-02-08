@@ -98,6 +98,28 @@ function Projects() {
               demoLink=""
             />
           </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={fullStackAWSImage}
+              isBlog={false}
+              title="Operationalizing a Co-working Space Service"
+              description="This project sets up a microservices architecture on AWS EKS, including a PostgreSQL database and a Python analytics service."
+              ghLink="https://github.com/mossi4476/Operationalizing-a-Co-working-Space-Service"
+              demoLink=""
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={fullStackAWSImage}
+              isBlog={false}
+              title="Security and DevOps"
+              description="This project demonstrates security and DevOps skills by completing an eCommerce application with proper authentication and authorization controls."
+              ghLink="https://github.com/mossi4476/nd035-c4-Security-and-DevOps"
+              demoLink=""
+            />
+          </Col>
         </Row>
       </Container>
     </Container>
