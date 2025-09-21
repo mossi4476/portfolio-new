@@ -1,0 +1,366 @@
+.advanced-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, 
+    rgba(12, 5, 19, 0.95) 0%,
+    rgba(17, 16, 16, 0.9) 50%,
+    rgba(12, 8, 24, 0.95) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  overflow: hidden;
+}
+
+/* Animated background */
+.loader-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.floating-shapes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.floating-shape {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  filter: blur(1px);
+}
+
+/* Main loader content */
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+/* Logo */
+.loader-logo {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.logo-shape {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, var(--imp-text-color) 0%, #9c4dc7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 20px 60px rgba(199, 112, 240, 0.4),
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    inset 0 2px 10px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-shape::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: logoRotate 3s linear infinite;
+}
+
+.logo-inner {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: inherit;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+/* Loading text */
+.loader-text {
+  margin-bottom: 40px;
+}
+
+.loader-text h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+  text-shadow: 0 2px 20px rgba(199, 112, 240, 0.5);
+}
+
+/* Progress bar */
+.progress-container {
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #c770f0 0%, #9c4dc7 50%, #667eea 100%);
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(199, 112, 240, 0.6);
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.progress-percentage {
+  text-align: center;
+  color: var(--imp-text-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 10px;
+  text-shadow: 0 2px 10px rgba(199, 112, 240, 0.5);
+}
+
+/* Loading dots */
+.loading-dots {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--imp-text-color);
+  box-shadow: 0 0 20px rgba(199, 112, 240, 0.6);
+}
+
+/* Orbital elements */
+.orbital-container {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.orbital {
+  position: absolute;
+  border: 1px solid rgba(199, 112, 240, 0.3);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbital-1 {
+  width: 150px;
+  height: 150px;
+}
+
+.orbital-2 {
+  width: 200px;
+  height: 200px;
+  border-color: rgba(156, 77, 199, 0.2);
+}
+
+.orbital-3 {
+  width: 250px;
+  height: 250px;
+  border-color: rgba(102, 126, 234, 0.15);
+}
+
+.orbital-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--imp-text-color);
+  border-radius: 50%;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(199, 112, 240, 0.8);
+}
+
+/* Particle effects */
+.particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  filter: blur(0.5px);
+}
+
+/* Animations */
+@keyframes logoRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Light theme */
+[data-theme="light"] .advanced-loader {
+  background: linear-gradient(135deg, 
+    rgba(240, 248, 255, 0.95) 0%,
+    rgba(230, 230, 250, 0.9) 50%,
+    rgba(240, 248, 255, 0.95) 100%);
+}
+
+[data-theme="light"] .loader-text h2 {
+  color: #333;
+  text-shadow: 0 2px 20px rgba(199, 112, 240, 0.3);
+}
+
+[data-theme="light"] .progress-bar {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .floating-shape {
+  opacity: 0.6;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .logo-shape {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .logo-inner {
+    font-size: 1.5rem;
+  }
+  
+  .loader-text h2 {
+    font-size: 1.2rem;
+  }
+  
+  .progress-container {
+    width: 250px;
+  }
+  
+  .orbital-container {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .orbital-1 {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .orbital-2 {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .orbital-3 {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .floating-shape {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loader-text h2 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+  
+  .progress-container {
+    width: 200px;
+  }
+  
+  .logo-shape {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .logo-inner {
+    font-size: 1.2rem;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .floating-shape,
+  .orbital,
+  .logo-shape::before,
+  .particle {
+    animation: none !important;
+  }
+  
+  .dot {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  .progress-fill::after {
+    animation: none;
+  }
+}
