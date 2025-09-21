@@ -12,7 +12,6 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
-  AiOutlineMail,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 import { motion } from "framer-motion";

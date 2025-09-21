@@ -2,12 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   AiOutlineArrowUp, 
-  AiOutlineMessage, 
   AiOutlineGithub,
   AiOutlineLinkedin,
   AiOutlineDownload,
-  AiOutlineHome,
-  AiOutlineBulb
+  AiOutlineHome
 } from 'react-icons/ai';
 import { BsShare } from 'react-icons/bs';
 import './FloatingActions.css';
